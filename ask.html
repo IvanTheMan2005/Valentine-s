@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خوشگلم</title>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="fourth">
+    <div class="wrapper">
+        
+        <h2 class="question">Will you be my Valentine ?</h2>
+        <div class="btn-group">
+            
+            <button id="f" class="yes-btn">Yes</button>
+            <button id="f" class="no-btn">No</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+<script>    
+
+const wrapper = document.querySelector('.wrapper');
+const question = document.querySelector('.question');
+const yesBtn = document.querySelector('.yes-btn');
+const noBtn = document.querySelector('.no-btn');
+const wrapperRect = wrapper.getBoundingClientRect();
+const noBtnRect = noBtn.getBoundingClientRect();
+
+// Array of phrases with initial color
+const phrases = [
+    { text: "Do you love me?", color: "purple" },
+    { text: "Why don't you love me?", color: "purple" },
+    { text: "stop", color: "purple" },
+    { text: "STOP", color: "purple" },
+    { text: "Is it something I said?", color: "purple" },
+    { text: "PLEASEE", color: "purple" },
+    { text: "Getting a little angry", color: "purple" },
+    { text: "NOW IM SUPER ANGRY", color: "purple" },
+    { text: "ERIN GHARIBI", color: "purple" },
+    { text: "NO MORE SUSHI", color: "purple" },
+    { text: "stop stop STOP", color: "purple" },
+    { text: "WHAT DID YOU...SAY", color: "purple" },
+    { text: "O M G", color: "purple" },
+    { text: "ENOUGH", color: "purple" },
+    { text: "that's it", color: "purple" },
+    { text: "hehe i still like you", color: "purple" },
+    { text: "I'M FURIOUS", color: "purple" },
+    { text: "I'm watching", color: "purple" },
+    { text: "My heart is turning black", color: "purple" }
+];
+noBtn.addEventListener('mouseover', () => {
+    const i = Math.floor(Math.random() * (wrapperRect.width - noBtnRect.width)) + 1;
+    const j = Math.floor(Math.random() * (wrapperRect.height - noBtnRect.height)) + 1;
+    noBtn.style.left = i + 'px';
+    noBtn.style.top = j + 'px';
+});
+
+
+// Function to randomly select a phrase
+function getRandomPhrase() {
+    return phrases[Math.floor(Math.random() * phrases.length)];
+}
+
+let fontSize = 32; // Initial font size
+let hoverCount = 0; // Variable to track hover count
+
+yesBtn.addEventListener('click', () => {
+    
+    window.location.href = 'out.html';
+});
+
+noBtn.addEventListener('mouseover', () => {
+    // Change the question text to a random phrase
+    const randomPhrase = getRandomPhrase();
+    question.innerHTML = randomPhrase.text;
+    question.style.color = randomPhrase.color;
+
+    // Increase font size
+    fontSize += 2;
+    question.style.fontSize = `${fontSize}px`;
+
+    // Calculate darkness level based on hover count
+    const darkness = Math.min(10, hoverCount) / 10;
+
+    // Change background color gradually
+    wrapper.style.backgroundColor = `rgba(0, 0, 0, ${darkness})`; // Change background color to black with increasing opacity
+});
+
+noBtn.addEventListener('mouseout', () => {
+    hoverCount++; // Increment hover count
+});
+
+
+</script>
+</html>
+

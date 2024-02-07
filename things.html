@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>خوشگلم</title>
+</head>
+<body id="thirdPage"></body>>
+     
+    <div class="ccontainer">
+
+        <div class="slide">
+
+            
+            <div class="item" style="background-image: url(images/pic1.jpeg);">
+                <div class="ccontent">
+                    <div class="name">CLICK FOR SURPISE</div>
+                    <div class="des">CLICK NOW</div>
+                    <a href="ask.html">
+                    <button>CLICKKKK</button></a>
+
+                </div>
+            </div>
+            <div class="item" style="background-image: url(images/pic2.jpeg);">
+                <div class="ccontent">
+                    <div class="name">Carridgeway</div>
+                    <div class="des">One of my favourite places, where we relax,laugh and watch movies!</div>
+                    
+                </div>
+            </div>
+            <div class="item" style="background-image: url(images/pic3.jpeg);">
+                <div class="ccontent">
+                    <div class="name">Carridgeway Pt 2</div>
+                    <div class="des">If you look closely bottom right, you'll see someone watching US</div>
+                    
+                </div>
+            </div>
+            <div class="item" style="background-image: url(images/pic4.jpeg);">
+                <div class="ccontent">
+                    <div class="name">Our First</div>
+                    <div class="des">First photo we ever took.I sometimes look at this and just think how far we have come together.</div>
+                   
+                </div>
+            </div>
+            <div class="item" style="background-image: url(images/pic5.jpeg);">
+                <div class="ccontent">
+                    <div class="name">Our Last</div>
+                    <div class="des">This might of been one of the last pictures we took at school as official students!</div>
+                    
+                </div>
+            </div>
+            <div class="item" style="background-image: url(images/pic6.jpeg);">
+                <div class="ccontent">
+                    <div class="name">My pretty</div>
+                    <div class="des">You just look so good here.</div>
+                   
+                </div>
+            </div>
+            <div class="item" style="background-image: url(images/pic7.jpeg);">
+                <div class="ccontent">
+                    <div class="name">Formal PT 1</div>
+                    <div class="des">That's us together. I really like this photo because it's the type of photo to show our kids</div>
+                    
+                </div>
+            </div>
+            <div class="item" style="background-image: url(images/pic8.jpeg);">
+                <div class="ccontent">
+                    <div class="name">Formal PT 2</div>
+                    <div class="des">We look so good together ngl</div>
+                   
+                </div>
+            </div>
+            <div class="item" style="background-image: url(images/pic9.jpeg);">
+                <div class="ccontent">
+                    <div class="name">Handsie</div>
+                    <div class="des">I like this photo because I like when we hold hands</div>
+                    
+                </div>
+            </div>
+            <div class="item" style="background-image: url(images/pic10.jpeg);">
+                <div class="ccontent">
+                    <div class="name">Boos/Besito</div>
+                    <div class="des">One of first kiss photos. I also really like giving u kisses</div>
+                    
+                </div>
+            </div>
+            <div class="item" style="background-image: url(images/pic11.jpeg);">
+                <div class="ccontent">
+                    <div class="name">Your eyes</div>
+                    <div class="des">I love your eyesies, they are literally glimmering erinn  </div>
+                   
+                </div>
+            </div>
+            <div class="item" style="background-image: url(images/pic13.PNG);">
+                <div class="ccontent">
+                    <div class="name">Gamers</div>
+                    <div class="des">We have played a lot of games but I would say gumi gumi chef and roblox were my fav and chess</div>
+                   
+                </div>
+            </div>
+            <div class="item" style="background-image: url(images/pic14.jpg);">
+                <div class="ccontent">
+                    <div class="name">My pretty PT 2</div>
+                    <div class="des">I love this photo uu look so pretty</div>
+                   
+                </div>
+            </div>
+            <div class="item" style="background-image: url(images/pic15.jpg);">
+                <div class="ccontent">
+                    <div class="name">Hello Kitty</div>
+                    <div class="des">Your hello kitty socks besides my always grey or black ones </div>
+                   
+                </div>
+            </div>
+            <div class="item" style="background-image: url(images/pic16.jpg);">
+                <div class="ccontent">
+                    <div class="name">Our first PT2</div>
+                    <div class="des">Maybe not our first but definetly one of the first dates we had since we started talking again</div>
+                   
+                </div>
+            </div>
+            <div class="item" style="background-image: url(images/pic17.jpg);">
+                <div class="ccontent">
+                    <div class="name">The End</div>
+                    <div class="des">And finally this one, that captures me in my happy place, with you. I love you (GO TO NEXT SLIDE for surprise) </div>
+                   
+                </div>
+            </div>
+
+        </div>
+
+        <div class="bbutton">
+            <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+    </div>
+    <script>
+      let next = document.querySelector('.next')
+let prev = document.querySelector('.prev')
+
+next.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').appendChild(items[0])
+})
+
+prev.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').prepend(items[items.length - 1]) // here the length of items = 6
+})
+    </script> 
+</body>
+</html>

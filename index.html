@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>خوشگلم</title>
+</head>
+<body>
+    <section>
+        <div class="form-box">   
+            <div class="form-value">
+                <form id="loginForm" action="">        
+                    <h2>Enter the secret word</h2>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input id="emailInput" type="text" required>
+                        <label for="emailInput">Password:</label>
+                    </div>
+                    <div class="forget">
+                        <label for=""><a href="#">Text me if you forget password</a></label>
+                    </div>
+                    <button id="verifyButton">Verify</button>
+                </form>   
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const emailInput = document.getElementById('emailInput');
+            const enteredText = emailInput.value.toLowerCase();
+    
+            if (enteredText === 'poo') {
+                // Allow user to proceed, you can navigate to another screen here
+                window.location.href = 'photos.html';
+            } else {
+                // Display an error message and reset the input field
+                alert('That is not the PASSWORD! i give you hint starts with p');
+                emailInput.value = ''; // Reset the input field
+            }
+        });
+    </script>
+    
+    
+    
+</body>
+</html>
